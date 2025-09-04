@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "CodeFixer: AI Code Analyzer",
+    "version": "1.0.0",
+    "description": "Analyze code on websites and suggest fixes using AI.",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "host_permissions": [
+        "<all_urls>",
+        "http://localhost:11434/*"
+    ],
+    "action": {
+        "default_title": "Analyze Code",
+        "default_popup": "src/popup/popup.html"
+    },
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle",
+            "all_frames": false
+        }
+    ],
+    "icons": {},
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' http://localhost:11434 https://api.openrouter.ai https://api.openai.com https://api-inference.huggingface.co;"
+    }
+}

@@ -1,0 +1,1 @@
+{"root":["./src/background/index.ts","./src/common/messaging.ts","./src/common/types.ts","./src/content/index.ts","./src/lib/heuristics.ts","./src/lib/ratelimiter.ts","./src/lib/storage.ts","./src/lib/ai/analyze.ts","./src/lib/ai/providers.ts","./src/popup/popup.tsx"],"version":"5.9.2"}

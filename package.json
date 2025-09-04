@@ -1,0 +1,37 @@
+{
+    "name": "codefixer-extension",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite --mode development",
+        "build": "tsc -b && vite build",
+        "preview": "vite preview --port 5174",
+        "lint": "eslint \"src/**/*.{ts,tsx}\"",
+        "format": "prettier --write .",
+        "zip": "node scripts/zip.js"
+    },
+    "dependencies": {
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "zustand": "^4.5.2"
+    },
+    "devDependencies": {
+        "adm-zip": "^0.5.12",
+        "@types/chrome": "^0.0.270",
+        "@types/node": "^22.5.4",
+        "@types/react": "^18.3.3",
+        "@types/react-dom": "^18.3.0",
+        "@typescript-eslint/eslint-plugin": "^8.6.0",
+        "@typescript-eslint/parser": "^8.6.0",
+        "eslint": "^9.9.1",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+        "eslint-plugin-react-refresh": "^0.4.9",
+        "prettier": "^3.3.3",
+        "rollup-plugin-zip": "^1.0.3",
+        "typescript": "^5.5.4",
+        "vite": "^5.4.2",
+        "@vitejs/plugin-react": "^4.3.1"
+    }
+}
